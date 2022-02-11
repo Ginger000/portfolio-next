@@ -15,6 +15,9 @@ module.exports = {
       '0.5':'0.5px'
     },
     extend: {
+      zIndex: {
+        '9999': '9999',
+      },
       width: {
         '128': '32rem',
         '156': '36rem',

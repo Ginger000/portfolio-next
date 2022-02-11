@@ -10,3 +10,6 @@ https://www.youtube.com/watch?v=vcopLqUq594
 
 https://www.freecodecamp.org/news/4-reasons-your-z-index-isnt-working-and-how-to-fix-it-coder-coder-6bc05f103e6c/
 
+https://stackoverflow.com/questions/35310779/why-does-the-negative-z-index-removes-the-hovering-capabilities-of-non-staticall
+
+https://stackoverflow.com/questions/70071853/why-is-my-button-overlapping-my-navbar-when-scrolling
