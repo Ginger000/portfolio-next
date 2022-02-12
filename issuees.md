@@ -22,3 +22,5 @@ https://github.com/vercel/next.js/blob/canary/examples/cms-strapi/README.md
 
 https://www.reddit.com/r/Strapi/comments/oird2a/how_to_display_strapi_markdown_in_nextjs_app/
 
+https://icon-sets.iconify.design/simple-icons/leetcode/
+

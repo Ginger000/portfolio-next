@@ -13,8 +13,8 @@ const Hero = ({ hero }) => {
                 <h1 className="text-3xl sm:text-5xl 2xl:text-7xl font-semibold text-ho-pink opacity-50 relative -z-10">
                     {content2}
                 </h1>
-                <p className="font-light text-ho-pink w-full md:w-128 2xl:text-lg">{content3}</p>
-                <p className="font-light text-hyper-cyan 2xl:text-lg">
+                <p className=" w-full md:w-128 2xl:text-lg">{content3}</p>
+                <p className="text-hyper-cyan 2xl:text-lg">
                 I’m graduating at May, 2022, 
                 <br className='' />
                 and currently finding a Front-end developer job or internship.

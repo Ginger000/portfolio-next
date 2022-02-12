@@ -7,6 +7,7 @@ import ProjectCard from "./Components/ProjectCard"
 import ReactMarkdown from 'react-markdown'
 import About from "./Components/About"
 
+
 export default function Home({hero, featureProjects, profile}) {
   const temp = [1,2,3,4,5,6]
   return (
