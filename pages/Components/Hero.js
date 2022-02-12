@@ -1,12 +1,14 @@
 import React from 'react';
 import Button from './Button';
+import ReactMarkdown from 'react-markdown'
 
 const Hero = ({ hero }) => {
     const { content1, name, content2, content3, content4 } = hero.attributes;
     return (
         <div className='w-4/5 mx-auto pt-40 xl:pt-60 space-y-2 sm:space-y-6 h-full md:h-screen'>
             {/* <div className='space-y-4'> */}
-                <p className="text-hyper-cyan font-light 2xl:text-lg">{content1}</p>
+          
+                <p className="text-hyper-cyan font-light 2xl:text-lg"> <ReactMarkdown>{content1}</ReactMarkdown> </p>
                 <h1 className="text-3xl sm:text-5xl 2xl:text-7xl font-bold text-ho-pink">{name}</h1>
                 <h1 className="text-3xl sm:text-5xl 2xl:text-7xl font-semibold text-ho-pink opacity-50 relative -z-10">
                     {content2}

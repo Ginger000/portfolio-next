@@ -4,12 +4,13 @@ import axios from "axios"
 import FeaturedProject from "./Components/FeaturedProject"
 import SectionIntro from "./Components/SectionIntro"
 import ProjectCard from "./Components/ProjectCard"
+import ReactMarkdown from 'react-markdown'
+import About from "./Components/About"
 
-export default function Home({hero, featureProjects}) {
+export default function Home({hero, featureProjects, profile}) {
   const temp = [1,2,3,4,5,6]
   return (
     <div className=' text-white w-full '>
-
       {/* <h1>Ginger</h1> */}
       <Hero hero={hero}/>
       
@@ -35,11 +36,11 @@ export default function Home({hero, featureProjects}) {
       </section>
       <section className="w-4/5 xl:max-w-screen-lg mx-auto" id="about">
         <SectionIntro content="Who I am" />
-        <div></div>
+        <About profile={profile}/>
       </section>
 
       
-      
+  
     </div>
   )
 }
@@ -47,15 +48,17 @@ export default function Home({hero, featureProjects}) {
 Home.getInitialProps = async () => {
   const res = await axios.get("http://localhost:1337/api/heroes/1")
   const res2 = await axios.get("http://localhost:1337/api/projects?populate=cover")
+  const res3 = await axios.get("http://localhost:1337/api/profiles?populate=*")
   const {data} = res.data;
   const projectData = res2.data.data
+  const profileData = res3.data.data
   // const temp = projectData[0].attributes.cover.data.attributes.formats.large.url
-  console.log(data)
-  console.log("helloooooo")
-  console.log(projectData)
+  // console.log(data)
+  // console.log("helloooooo")
+  console.log(profileData[0].attributes)
   // console.log(temp)
   // console.log(`localhost:1337${temp}`)
-  return{hero:data, featureProjects:projectData}
+  return{hero:data, featureProjects:projectData, profile:profileData}
   // return{featureProjects:projectData}
 
 }

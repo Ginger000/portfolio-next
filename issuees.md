@@ -16,3 +16,9 @@ https://stackoverflow.com/questions/70071853/why-is-my-button-overlapping-my-nav
 
 https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state
 
+https://forum.strapi.io/t/strapi-rich-content-text-not-showing-correctly-on-web-page/10690
+
+https://github.com/vercel/next.js/blob/canary/examples/cms-strapi/README.md
+
+https://www.reddit.com/r/Strapi/comments/oird2a/how_to_display_strapi_markdown_in_nextjs_app/
+
