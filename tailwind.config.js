@@ -28,6 +28,7 @@ module.exports = {
         'hyper-cyan':'#00EEFD',
         'lighter-back':'#10374D',
         'card-back':'#25324A',
+        'pale-blue':'#94E1F9',
       },
     },
   },

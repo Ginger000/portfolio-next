@@ -13,3 +13,6 @@ https://www.freecodecamp.org/news/4-reasons-your-z-index-isnt-working-and-how-to
 https://stackoverflow.com/questions/35310779/why-does-the-negative-z-index-removes-the-hovering-capabilities-of-non-staticall
 
 https://stackoverflow.com/questions/70071853/why-is-my-button-overlapping-my-navbar-when-scrolling
+
+https://tailwindcss.com/docs/hover-focus-and-other-states#styling-based-on-parent-state
+
