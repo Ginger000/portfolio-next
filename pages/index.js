@@ -8,9 +8,11 @@ import ReactMarkdown from 'react-markdown'
 import About from "./Components/About"
 import { HobbyCard } from "./Components/HobbyCard"
 import Contact from "./Components/Contact"
+import Link from "next/link"
 
 
 export default function Home({hero, featureProjects, profile,hobbies}) {
+  console.log("*****************IN INDEX COMPONENT******************")
   const temp = [1,2,3,4,5,6]
   const temp2 = [1,2,3]
   return (
@@ -26,7 +28,9 @@ export default function Home({hero, featureProjects, profile,hobbies}) {
           })
         }
         <h2 className="text-center text-ho-pink text-3xl opacity-50 font-bold">Other Relevant Projects</h2>
-        <h6 className="text-center hover:text-hyper-cyan duration-500 hover:cursor-pointer mt-6 md:mb-16">view the archive</h6>
+        <Link href="/archive">
+          <h6 className="text-center hover:text-hyper-cyan duration-500 hover:cursor-pointer mt-6 md:mb-16">view the archive</h6>
+        </Link>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           {
             temp.map(t=>{
@@ -48,7 +52,6 @@ export default function Home({hero, featureProjects, profile,hobbies}) {
         <SectionIntro content="What I like" />
           <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20">
             {hobbies.map((hobby, idx) =>{
-              console.log(hobby)
               return <HobbyCard key={idx} hobby={hobby}/>
             })}
           </div>
@@ -77,7 +80,7 @@ Home.getInitialProps = async () => {
   // console.log(data)
   // console.log("helloooooo")
   // console.log(profileData[0].attributes)
-  console.log(hobbyData)
+  // console.log(hobbyData)
   // console.log(temp)
   // console.log(`localhost:1337${temp}`)
   return{hero:data, featureProjects:projectData, profile:profileData, hobbies:hobbyData}

@@ -9,12 +9,11 @@ export const HobbyCard = ({hobby}) => {
   return (
     <div className='group px-6 py-6  rounded-md h-72 flex flex-col justify-between md:hover:-translate-y-4 hover:drop-shadow-xl duration-500
         border-2 border-hyper-cyan'>
-          {console.log(hobby)}
-        <h1 className='text-3xl text-pale-blue font-bold group-hover:text-hyper-cyan'>
+        <div className='text-3xl text-pale-blue font-bold group-hover:text-hyper-cyan'>
             <h3>{name_1}</h3>
             <h3>{name_2}</h3>
             <h3>{name_3}</h3>
-        </h1>
+        </div>
         <p className='font-light'>
             {quote}
         </p>

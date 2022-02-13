@@ -28,3 +28,8 @@ https://v2.tailwindcss.com/docs/just-in-time-mode#sibling-selector-variants
 
 https://stackoverflow.com/questions/63334626/tailwind-css-is-there-a-way-to-target-next-sibling
 
+https://stackoverflow.com/questions/63180045/pass-data-from-page-to-another
+
+https://stackoverflow.com/questions/60899880/next-js-reduce-data-fetching-and-share-data-between-pages/61131312#61131312
+
+https://stackoverflow.com/questions/63180045/pass-data-from-page-to-another

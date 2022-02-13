@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 const Navbar = () => {
     let links = [
-        { name: 'Work', link: '/' },
-        { name: 'About', link: '/' },
-        { name: 'Contact', link: '/' },
+        { name: 'Work', link: '#work' },
+        { name: 'About', link: '#about' },
+        { name: 'Contact', link: '#contact' },
         { name: 'Resume', link: '/' },
     ];
 
@@ -20,12 +21,14 @@ const Navbar = () => {
                     className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
         text-gray-800"
                 >
+                    {/* link is supposed to be outside of span. Span accept the onClick */}
+                    <Link href="/">
                     <span className="text-2xl text-ho-pink mr-1 pt-2 hover:text-hyper-cyan duration-500">
-                    <FontAwesomeIcon
-                        icon={faPaperPlane}
-                    ></FontAwesomeIcon>
+                        <FontAwesomeIcon
+                            icon={faPaperPlane}
+                        ></FontAwesomeIcon>
                     </span>
-                    
+                    </Link>
                 </div>
 
                 <div
