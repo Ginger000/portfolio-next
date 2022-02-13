@@ -16,17 +16,17 @@ const About = ({ profile }) => {
     const avatar_2_url = avatar_2.data.attributes.formats.small.url;
     const avatar_2_alt = avatar_2.data.attributes.alternativeText;
     return (
-        <div className="grid grid-cols-12">
-            {console.log(profile[0].attributes)}
-            <div className="col-span-7">
+        <div className="grid grid-cols-12 mt-10 mb-40 text-gray-200">
+            <div className="col-span-12 md:col-span-7 pr-10">
                 <div>
                     <ReactMarkdown>{content_1}</ReactMarkdown>
                 </div>
-                <div>
+                <div className='mt-10'>
                     <ReactMarkdown>{content_2}</ReactMarkdown>
                 </div>
             </div>
-            <div className="col-span-5">
+
+            <div className="col-span-12 md:col-span-5 hidden lg:block">
                 <div className="peer relative inline-block left-52 hover:z-20 duration-500">
                     <div className="relative inline-block opacity-60 hover:opacity-100 duration-500">
                         <img
@@ -38,7 +38,7 @@ const About = ({ profile }) => {
                     </div>
                 </div>
 
-                <div className="relative -top-20 flex peer-hover:opacity-40 duration-500">
+                <div className="relative -top-28 flex peer-hover:opacity-40 duration-500">
                     <div className="relative ">
                         <img
                             className=""
@@ -47,12 +47,41 @@ const About = ({ profile }) => {
                         />
                         <div className="-z-10 absolute h-full w-full top-5 left-5 border-0.5 border-hyper-cyan"></div>
                     </div>
-                    <div className='flex flex-col space-y-3 text-2xl justify-end'>
+                    <div className=' ml-6 mt-10 bottom-5 flex flex-col space-y-3 text-2xl justify-end'>
+                    <FontAwesomeIcon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon={faFacebookSquare}></FontAwesomeIcon>
+                    <FontAwesomeIcon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon={faInstagram} ></FontAwesomeIcon>
+                    <FontAwesomeIcon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon={faGithub}  ></FontAwesomeIcon>
+                    <Icon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon="simple-icons:leetcode" />
+                    <Icon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon="cib:issuu" />
+                    </div>
+                </div>
+            </div>
+
+            <div className="col-span-12 md:col-span-5 lg:hidden">
+                <div className="peer relative text-center  hover:z-20 duration-500">
+                    <div className="relative inline-block opacity-60 hover:opacity-100 duration-500">
+                        <img
+                            className="h-60"
+                            src={`http://localhost:1337${avatar_2_url}`}
+                            alt={avatar_2_alt}
+                        />
+                    </div>
+                </div>
+
+                <div className="relative lg:-top-20 -top-48 flex flex-col peer-hover:opacity-40 duration-500">
+                    <div className="relative ">
+                        <img
+                            className=""
+                            src={`http://localhost:1337${avatar_1_url}`}
+                            alt={avatar_1_alt}
+                        />
+                    </div>
+                    <div className='mt-6 flex space-x-3 text-2xl justify-center items-center'>
                     <FontAwesomeIcon className='hover:text-hyper-cyan duration-500 cursor-pointer' icon={faFacebookSquare}></FontAwesomeIcon>
                     <FontAwesomeIcon className='hover:text-hyper-cyan duration-500 cursor-pointer' icon={faInstagram} ></FontAwesomeIcon>
                     <FontAwesomeIcon className='hover:text-hyper-cyan duration-500 cursor-pointer' icon={faGithub}  ></FontAwesomeIcon>
                     <Icon className='hover:text-hyper-cyan duration-500 cursor-pointer' icon="simple-icons:leetcode" />
-                    <Icon className='hover:text-hyper-cyan duration-500 cursor-pointer' icon="cib:issuu" />
+                    <Icon className='hover:text-hyper-cyan duration-500 cursor-pointer text-xl' icon="cib:issuu" />
                     </div>
                 </div>
             </div>

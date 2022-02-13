@@ -24,3 +24,7 @@ https://www.reddit.com/r/Strapi/comments/oird2a/how_to_display_strapi_markdown_i
 
 https://icon-sets.iconify.design/simple-icons/leetcode/
 
+https://v2.tailwindcss.com/docs/just-in-time-mode#sibling-selector-variants
+
+https://stackoverflow.com/questions/63334626/tailwind-css-is-there-a-way-to-target-next-sibling
+
