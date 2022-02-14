@@ -1,6 +1,27 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# gingerlinjiang.com
+
+![Hero screenshot of the portfolio website](cover.png)
+
+This is my personal portfolio website.
+
+#### TechStack:
+- The front-end is built with Nextjs and hosted with Vercel.
+- The back-end is built with Strapi and hosted with Heroku
+- The CSS framework is Tailwind CSS
+- State management is React
+- Icons comes from Fontawesome and Iconify
+
+#### Credits:
+- The web design is based on https://github.com/bchiang7/v4. Very cool web design. Thank you!
+- All code is written by myself. The techstack used here is different from the design example.
+
+---
+The markdown below is nextjs instructions:
+
+
+### Getting Started
 
 First, run the development server:
 
@@ -18,7 +39,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+### Learn More
 
 To learn more about Next.js, take a look at the following resources:
 

@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-
 const archive = ({ featureProjects }) => {
     console.log(featureProjects);
     return (
@@ -14,9 +13,9 @@ const archive = ({ featureProjects }) => {
                 Here is the project archive
             </h1>
 
-            <table className="table-auto text-gray-200 w-full divide-y">
+            <table className="hidden md:table table-auto text-gray-200 w-full divide-y divide-slate-600">
                 <thead>
-                    <tr>
+                    <tr className='text-left'>
                         <th>Year</th>
                         <th>Title</th>
                         <th>Made at</th>
@@ -24,25 +23,25 @@ const archive = ({ featureProjects }) => {
                         <th>Link</th>
                     </tr>
                 </thead>
-                <tbody className='divide-y'>
-                {featureProjects.map((f) => (
-                    <tr key={f.attributes.title}>
-                    <td>2022</td>
-                    <td>{f.attributes.title}</td>
-                    <td>1961</td>
-                    <td>React</td>
-                    <td>
-                        <FontAwesomeIcon className='text-xl hover:text-hyper-cyan hover:cursor-pointer duration-500' icon={faGithub}></FontAwesomeIcon>
-                        <FontAwesomeIcon className='text-xl hover:text-hyper-cyan hover:cursor-pointer duration-500' icon={faArrowUpRightFromSquare} ></FontAwesomeIcon>
-
-                    </td>
-                </tr>
-                // <h5 className="text-gray-200" key={f.attributes.title}>
-                //     <Link href={`/project?id=${f.id}`}>
-                //         {f.attributes.title}
-                //     </Link>
-                // </h5>
-            ))}
+                <tbody className="divide-y divide-slate-600">
+                    {featureProjects.map((f) => (
+                        <tr className='hover:bg-slate-800' key={f.attributes.title}>
+                            <td className='text-hyper-cyan text-xl py-4'>2022</td>
+                            <td className='font-bold text-xl' >{f.attributes.title}</td>
+                            <td className=''>1961</td>
+                            <td>React</td>
+                            <td className='space-x-2'>
+                                <FontAwesomeIcon
+                                    className="text-xl hover:text-hyper-cyan hover:cursor-pointer duration-500"
+                                    icon={faGithub}
+                                ></FontAwesomeIcon>
+                                <FontAwesomeIcon
+                                    className="text-xl hover:text-hyper-cyan hover:cursor-pointer duration-500"
+                                    icon={faArrowUpRightFromSquare}
+                                ></FontAwesomeIcon>
+                            </td>
+                        </tr>
+                    ))}
                     <tr>
                         <td>The Sliding Mr. Bones</td>
                         <td>Malcolm Lockyer</td>
@@ -60,7 +59,49 @@ const archive = ({ featureProjects }) => {
                     </tr>
                 </tbody>
             </table>
-            
+
+            <table className="md:hidden table-auto text-gray-200 w-full divide-y divide-slate-600">
+                <thead>
+                    <tr className='text-left'>
+                        <th>Year</th>
+                        <th>Title</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-600">
+                    {featureProjects.map((f) => (
+                        <tr className='hover:bg-slate-800' key={f.attributes.title}>
+                            <td className='text-hyper-cyan text-md py-2'>2022</td>
+                            <td className='font-bold text-md' >{f.attributes.title}</td>
+                            <td className='space-x-2'>
+                                <FontAwesomeIcon
+                                    className="text-xl hover:text-hyper-cyan hover:cursor-pointer duration-500"
+                                    icon={faGithub}
+                                ></FontAwesomeIcon>
+                                <FontAwesomeIcon
+                                    className="text-xl hover:text-hyper-cyan hover:cursor-pointer duration-500"
+                                    icon={faArrowUpRightFromSquare}
+                                ></FontAwesomeIcon>
+                            </td>
+                        </tr>
+                    ))}
+                    <tr>
+                        <td>The Sliding Mr. Bones</td>
+                        <td>Malcolm Lockyer</td>
+                        <td>1961</td>
+                    </tr>
+                    <tr>
+                        <td>Witchy Woman</td>
+                        <td>The Eagles</td>
+                        <td>1972</td>
+                    </tr>
+                    <tr>
+                        <td>Shining Star</td>
+                        <td>Earth, Wind, and Fire</td>
+                        <td>1975</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     );
 };
