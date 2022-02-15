@@ -68,10 +68,10 @@ export default function Home({hero, featureProjects, profile,hobbies}) {
 }
 
 Home.getInitialProps = async () => {
-  const res = await axios.get("http://localhost:1337/api/heroes/1")
-  const res2 = await axios.get("http://localhost:1337/api/projects?populate=cover")
-  const res3 = await axios.get("http://localhost:1337/api/profiles?populate=*")
-  const res4 = await axios.get("http://localhost:1337/api/hobbies")
+  const res = await axios.get("https://test-strapi-for-portfolio.herokuapp.com/api/heroes/1")
+  const res2 = await axios.get("https://test-strapi-for-portfolio.herokuapp.com/api/featured-projects?populate=*")
+  const res3 = await axios.get("https://test-strapi-for-portfolio.herokuapp.com/api/profiles?populate=*")
+  const res4 = await axios.get("https://test-strapi-for-portfolio.herokuapp.com/api/hobbies")
   const {data} = res.data;
   const projectData = res2.data.data
   const profileData = res3.data.data

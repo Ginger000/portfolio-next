@@ -108,7 +108,7 @@ const archive = ({ featureProjects }) => {
 
 archive.getInitialProps = async () => {
     const res2 = await axios.get(
-        'http://localhost:1337/api/projects?populate=cover'
+        'https://test-strapi-for-portfolio.herokuapp.com/api/featured-projects?populate=*'
     );
     const projectData = res2.data.data;
     return { featureProjects: projectData };

@@ -12,7 +12,7 @@ const project = ({id, info}) => {
 }
 
 project.getInitialProps = async ({query}) => {
-    const res = await axios.get(`http://localhost:1337/api/projects/${query.id}`)
+    const res = await axios.get(`https://test-strapi-for-portfolio.herokuapp.com/api/featured-projects/${query.id}`)
     const {data} = res.data;
     return{...query, info:data.attributes}
 } 

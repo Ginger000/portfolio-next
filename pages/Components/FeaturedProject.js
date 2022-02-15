@@ -4,16 +4,17 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const FeaturedProject = ({ project, id }) => {
-    const { title, description, techStack, github, deployLink } =
+    const { title, description, techStack, githubLink, deployLink } =
         project.attributes;
     const { url } = project.attributes.cover.data.attributes.formats.large;
     return (
         <div className=" drop-shadow-lg md:drop-shadow-none sm:w-4/5 xl:max-w-screen-lg mx-auto mb-24 mt-12">
+            {console.log(url)}
             <div className="grid grid-cols-10 ">
                 <div className="md:hidden relative row-span-full col-start-1 col-span-10 shadow-xl">
                     <img
                         className="opacity-10 absolute inset-0 w-full h-full object-cover object-center rounded-sm"
-                        src={`http://localhost:1337${url}`}
+                        src={`https://test-strapi-for-portfolio.herokuapp.com${url}`}
                         alt=""
                     />
                 </div>
@@ -25,7 +26,7 @@ const FeaturedProject = ({ project, id }) => {
                 >
                     <img
                         className="object-cover rounded-lg"
-                        src={`http://localhost:1337${url}`}
+                        src={`https://test-strapi-for-portfolio.herokuapp.com${url}`}
                         alt=""
                     />
                 </div>
@@ -41,7 +42,11 @@ const FeaturedProject = ({ project, id }) => {
                         } md:items-start space-y-2`}
                     >
                         <h6 className="text-hyper-cyan">Featured Project</h6>
-                        <h2 className={`hover:text-hyper-cyan ${id%2===0 ? 'text-right':'text-left'} duration-500 hover:cursor-pointer text-2xl font-bold`}>
+                        <h2
+                            className={`hover:text-hyper-cyan ${
+                                id % 2 === 0 ? 'text-right' : 'text-left'
+                            } duration-500 hover:cursor-pointer text-2xl font-bold`}
+                        >
                             {title}
                         </h2>
                         <div className="md:px-6 py-6 md:bg-card-back/75 rounded-md shadow-md hover:drop-shadow-lg">
@@ -61,19 +66,23 @@ const FeaturedProject = ({ project, id }) => {
                             })}
                         </ul>
                         <div className="space-x-6">
-                            {github ? (
-                                <FontAwesomeIcon
-                                    className="hover:text-hyper-cyan hover:cursor-pointer text-xl duration-500"
-                                    icon={faGithub}
-                                ></FontAwesomeIcon>
+                            {githubLink ? (
+                                <a href={githubLink} target="_blank">
+                                    <FontAwesomeIcon
+                                        className="hover:text-hyper-cyan hover:cursor-pointer text-xl duration-500"
+                                        icon={faGithub}
+                                    ></FontAwesomeIcon>
+                                </a>
                             ) : (
                                 ''
                             )}
                             {deployLink ? (
-                                <FontAwesomeIcon
-                                    className="hover:text-hyper-cyan hover:cursor-pointer text-xl duration-500"
-                                    icon={faArrowUpRightFromSquare}
-                                ></FontAwesomeIcon>
+                                <a href={deployLink} target="_blank">
+                                    <FontAwesomeIcon
+                                        className="hover:text-hyper-cyan hover:cursor-pointer text-xl duration-500"
+                                        icon={faArrowUpRightFromSquare}
+                                    ></FontAwesomeIcon>
+                                </a>
                             ) : (
                                 ''
                             )}
