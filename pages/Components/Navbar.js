@@ -22,7 +22,7 @@ const Navbar = () => {
         text-gray-800"
                 >
                     {/* link is supposed to be outside of span. Span accept the onClick */}
-                    <Link href="/">
+                    <Link href="/" passHref>
                     <span className="text-2xl text-ho-pink mr-1 pt-2 hover:text-hyper-cyan duration-500">
                         <FontAwesomeIcon
                             icon={faPaperPlane}
