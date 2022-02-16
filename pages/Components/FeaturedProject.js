@@ -17,7 +17,7 @@ const FeaturedProject = ({ project, id }) => {
                 <div className="md:hidden relative row-span-full col-start-1 col-span-10 shadow-xl">
                     <img
                         className="opacity-10 absolute inset-0 w-full h-full object-cover object-center rounded-sm"
-                        src={`https://test-strapi-for-portfolio.herokuapp.com${url}`}
+                        src={url}
                         alt=""
                     />
                 </div>
@@ -29,7 +29,7 @@ const FeaturedProject = ({ project, id }) => {
                 >
                     <img
                         className="object-cover rounded-lg"
-                        src={`https://test-strapi-for-portfolio.herokuapp.com${url}`}
+                        src={url}
                         alt=""
                     />
                 </div>

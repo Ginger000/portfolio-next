@@ -32,7 +32,7 @@ const About = ({ profile }) => {
                     <div className="relative inline-block opacity-60 hover:opacity-100 duration-500">
                         <img
                             className="h-60"
-                            src={`https://test-strapi-for-portfolio.herokuapp.com${avatar_2_url}`}
+                            src={avatar_2_url}
                             alt={avatar_2_alt}
                         />
                         <div className="-z-10 absolute top-5 left-5 h-full w-full border-0.5 border-ho-pink"></div>
@@ -43,7 +43,7 @@ const About = ({ profile }) => {
                     <div className="relative ">
                         <img
                             className=""
-                            src={`https://test-strapi-for-portfolio.herokuapp.com${avatar_1_url}`}
+                            src={avatar_1_url}
                             alt={avatar_1_alt}
                         />
                         <div className="-z-10 absolute h-full w-full top-5 left-5 border-0.5 border-hyper-cyan"></div>
@@ -63,7 +63,7 @@ const About = ({ profile }) => {
                     <div className="relative inline-block opacity-60 hover:opacity-100 duration-500">
                         <img
                             className="h-60"
-                            src={`https://test-strapi-for-portfolio.herokuapp.com${avatar_2_url}`}
+                            src={avatar_2_url}
                             alt={avatar_2_alt}
                         />
                     </div>
@@ -73,7 +73,7 @@ const About = ({ profile }) => {
                     <div className="relative ">
                         <img
                             className=""
-                            src={`https://test-strapi-for-portfolio.herokuapp.com${avatar_1_url}`}
+                            src={avatar_1_url}
                             alt={avatar_1_alt}
                         />
                     </div>
