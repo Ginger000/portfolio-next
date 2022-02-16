@@ -3,12 +3,14 @@ import Button from './Button';
 import ReactMarkdown from 'react-markdown'
 
 const Hero = ({ hero }) => {
+    if(hero) {
+
+    
     const { content1, name, content2, content3, content4 } = hero.attributes;
     return (
-        <div className='w-4/5 mx-auto pt-40 xl:pt-60 space-y-2 sm:space-y-6 h-full md:h-screen'>
-            {/* <div className='space-y-4'> */}
+        <div className='w-4/5 mx-auto pt-40 xl:pt-60 space-y-2 sm:space-y-6 h-full md:h-screen'>     
+            
           
-                {/* <p className="text-hyper-cyan font-light 2xl:text-lg"> <ReactMarkdown>{content1}</ReactMarkdown> </p> */}
                  <ReactMarkdown className="text-hyper-cyan font-light 2xl:text-lg">{content1}</ReactMarkdown> 
 
                 
@@ -22,7 +24,6 @@ const Hero = ({ hero }) => {
                 <br className='' />
                 and currently finding a Front-end developer job or internship.
                 </p>
-            {/* </div> */}
             <div className='pt-6 flex sm:flex-row flex-col sm:space-x-6 space-y-4 sm:space-y-0'>
               <Button>
                 Check Out My Work
@@ -34,6 +35,10 @@ const Hero = ({ hero }) => {
             
         </div>
     );
+  } else {
+    return null
+  }
+
 };
 
 export default Hero;
