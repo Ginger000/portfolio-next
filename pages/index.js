@@ -19,7 +19,7 @@ export default function Home({hero, featureProjects, profile,hobbies}) {
     <div className=' text-white w-full '>
       {/* <h1>Ginger</h1> */}
       <Hero hero={hero}/>
-      <h1>Hello world</h1>
+      
       <section className="w-4/5 xl:max-w-screen-lg mx-auto"  id="work">
       <SectionIntro content="What I've built" />
         {   
