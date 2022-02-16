@@ -4,7 +4,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const FeaturedProject = ({ project, id }) => {
-    if(project && id){
+    if(project){
 
     
     const { title, description, techStack, githubLink, deployLink } =

@@ -23,7 +23,7 @@ export default function Home({hero, featureProjects, profile,hobbies}) {
       <section className="w-4/5 xl:max-w-screen-lg mx-auto"  id="work">
       <SectionIntro content="What I've built" />
         {   
-          featureProjects && featureProjects.map((project,idx)=>{
+          featureProjects && featureProjects.sort((a,b)=>a.id-b.id).map((project,idx)=>{
             return <FeaturedProject key={idx} id={idx} project={project} />
           })
         }
