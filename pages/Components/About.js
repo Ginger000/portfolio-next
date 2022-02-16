@@ -10,6 +10,7 @@ import { Icon } from '@iconify/react';
 
 
 const About = ({ profile }) => {
+    if(profile){
     const { content_1, content_2, avatar_1, avatar_2 } = profile[0].attributes;
     const avatar_1_url = avatar_1.data.attributes.formats.medium.url;
     const avatar_1_alt = avatar_1.data.attributes.alternativeText;
@@ -87,6 +88,9 @@ const About = ({ profile }) => {
             </div>
         </div>
     );
+} else {
+    return null
+}
 };
 
 export default About;
