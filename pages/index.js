@@ -6,7 +6,7 @@ import SectionIntro from "./Components/SectionIntro"
 import ProjectCard from "./Components/ProjectCard"
 import ReactMarkdown from 'react-markdown'
 import About from "./Components/About"
-import { HobbyCard } from "./Components/HobbyCard"
+import HobbyCard from "./Components/HobbyCard"
 import Contact from "./Components/Contact"
 import Link from "next/link"
 
