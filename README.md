@@ -1,7 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# gingerlinjiang.com
 
+# gingerland.io
+
+[Click to the portflio](https://www.gingerland.io/)
 ![Hero screenshot of the portfolio website](cover.png)
 
 This is my personal portfolio website.
@@ -15,7 +16,7 @@ This is my personal portfolio website.
 
 #### Credits:
 - The web design is based on https://github.com/bchiang7/v4. Very cool web design. Thank you!
-- All code is written by myself. The techstack used here is different from the design example.
+- The code is written by myself. The techstack used here is different from the design example.
 
 ---
 The markdown below is nextjs instructions:
