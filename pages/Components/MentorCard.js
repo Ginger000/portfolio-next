@@ -4,6 +4,9 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 const MentorCard = ({singleProject}) => {
+    if(singleProject) {
+
+    
     const {title, mentorLink, githubLink, deployLink, techStack, practiceTime, cover} = singleProject.attributes
     const { url } = cover.data.attributes.formats.large;
     const {alternativeText} = cover.data.attributes
@@ -39,6 +42,9 @@ const MentorCard = ({singleProject}) => {
             </div>
         </div>
     );
+} else {
+    return null
+}
 };
 
 export default MentorCard;
