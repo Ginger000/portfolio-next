@@ -40,3 +40,8 @@ https://stackoverflow.com/questions/18875674/whats-the-difference-between-depend
 
 https://www.youtube.com/watch?v=4DbNUJ-9_U4
 
+https://stackoverflow.com/questions/4630312/reset-all-changes-after-last-commit-in-git
+
+
+https://www.reddit.com/r/javascript/comments/976dxy/i_have_both_yarn_and_npm_installed_and_theyre/
+

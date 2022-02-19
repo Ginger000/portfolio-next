@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { v4 as uuidv4 } from 'uuid';
 
 const FeaturedProject = ({ project, id }) => {
     if(project){
@@ -65,7 +66,7 @@ const FeaturedProject = ({ project, id }) => {
                         </div>
                         <ul className="text-hyper-cyan font-medium text-sm space-x-2 flex flex-wrap justify-start md:justify-end">
                             {techStack.split(' ').map((tech) => {
-                                return <li key={tech}>{tech}</li>;
+                                return <li key={uuidv4()}>{tech}</li>;
                             })}
                         </ul>
                         <div className="space-x-6">
