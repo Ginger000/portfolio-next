@@ -11,7 +11,7 @@ import HobbyCard from './Components/HobbyCard';
 import Contact from './Components/Contact';
 import Link from 'next/link';
 import { v4 as uuidv4 } from 'uuid';
-import Loader from './Components/loader';
+import Loader from './Components/Loader';
 
 export default function Home({
     hero,

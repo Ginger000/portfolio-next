@@ -10,7 +10,7 @@ const Loader = ({setLoading}) => {
   return (
     <div className='mt-20'>
         <div className='text-5xl text-gray-50 font-clip'>
-            LOADING
+            LOADING !!!
             <span className='dot1'>.</span>
             <span className='dot2'>.</span>
             <span className='dot3'>.</span>
