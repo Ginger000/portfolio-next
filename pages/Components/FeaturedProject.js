@@ -8,8 +8,6 @@ import { useInView } from 'react-intersection-observer';
 
 
 const FeaturedProject = ({ project, id }) => {
-    if(project){
-
     const {ref, inView} = useInView({
         triggerOnce: true,
         threshold:0.2
@@ -33,6 +31,9 @@ const FeaturedProject = ({ project, id }) => {
         }
         // console.log("use effect hook, inView = ", inView)
     },[inView])
+    if(project){
+
+    
 
     const { title, description, techStack, githubLink, deployLink } =
         project.attributes;
