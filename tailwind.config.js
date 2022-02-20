@@ -15,6 +15,11 @@ module.exports = {
       '0.5':'0.5px'
     },
     extend: {
+      fontFamily: {
+        clip: ['Clip'],
+        neoncity:['Neoncity']
+        // sans: ['Clip', 'sans-serif'],
+      },
       zIndex: {
         '9999': '9999',
       },
