@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import MentorCard from './Components/MentorCard';
 import axios from 'axios';
+import Loader from './Components/Loader';
 
 const FrontendMentor = ({ mentorProjectData }) => {
+    const [loading, setLoading] = useState(true);
     return (
-        <div className="mt-24 md:mt-48 w-4/5 xl:max-w-screen-lg mx-auto">
+        <>
+        {loading ? (<Loader setLoading={setLoading} />) :
+        (
+            <div className="mt-24 md:mt-48 w-4/5 xl:max-w-screen-lg mx-auto">
             <div className="grid md:grid-cols-2 md:gap-10 mb-6 md:mb-10">
                 <div className='flex justify-end'>
                 <p className='lg:w-4/5 text-gray-50'>
@@ -26,6 +31,9 @@ const FrontendMentor = ({ mentorProjectData }) => {
                 })}
             </div>
         </div>
+
+        )}
+        </>
     );
 };
 

@@ -1,13 +1,10 @@
-import React, {useEffect} from 'react'
-import styles from './Loader.module.css'
-const Loader = ({setLoading}) => {
-    useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 4000);
-    return () => clearTimeout(timer);
-  });
+import React from 'react'
+import { skipPartiallyEmittedExpressions } from 'typescript'
+import styles from './LoaderTest.module.css'
+
+const LoaderTest = () => {
   return (
+    // <div className={styles.test}>LoaderTest</div>
     <div className={styles.wrapper}>
         <div className={styles.loader}>
             LOADING
@@ -19,4 +16,4 @@ const Loader = ({setLoading}) => {
   )
 }
 
-export default Loader
+export default LoaderTest

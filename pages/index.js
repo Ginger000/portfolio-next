@@ -12,7 +12,7 @@ import Contact from './Components/Contact';
 import Link from 'next/link';
 import { v4 as uuidv4 } from 'uuid';
 import Loader from './Components/Loader';
-
+import LoaderTest from './Components/LoaderTest';
 export default function Home({
     hero,
     featureProjects,
@@ -36,7 +36,8 @@ export default function Home({
                 <div className=" text-white w-full ">
                     {/* <h1>Ginger</h1> */}
                     <Hero hero={hero} />
-
+                    {/* <Loader /> */}
+                    {/* <LoaderTest /> */}
                     <section
                         className="w-4/5 xl:max-w-screen-lg mx-auto pt-20"
                         id="work"
