@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
 
 const Navbar = () => {
     let links = [
@@ -15,7 +17,16 @@ const Navbar = () => {
     let [open, setOpen] = useState(false);
 
     return (
-        <div className="w-full fixed top-0 left-0 z-9999">
+        <motion.div 
+            className="w-full fixed top-0 left-0 z-9999"
+            initial={{ opacity: 0, y: -180 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        ease: "easeInOut",
+        duration: 1,
+        delay: 0.6,
+      }}
+        >
             <div className={`md:flex items-center justify-between   ${open ? 'bg-lighter-back transition-all duration-500 ease-in' : 'bg-back-blue transition-all duration-500 ease-in'}  md:bg-back-blue py-4 md:px-10 px-7`}>
                 <div
                     className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
@@ -62,7 +73,7 @@ const Navbar = () => {
                     ))}
                 </ul>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

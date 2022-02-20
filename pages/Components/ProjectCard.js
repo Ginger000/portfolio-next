@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -6,8 +6,10 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import ReactMarkdown from 'react-markdown';
 import { v4 as uuidv4 } from 'uuid';
 import Link from 'next/link';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
-const ProjectCard = ({ selected }) => {
+const ProjectCard = ({ selected}) => {
     if (selected) {
         const {
             title,
@@ -17,8 +19,33 @@ const ProjectCard = ({ selected }) => {
             deployLink,
             course,
         } = selected.attributes;
+
+        const {ref, inView} = useInView({
+            triggerOnce: true,
+            threshold:0.2
+        });
+        const animation = useAnimation();
+        useEffect(()=>{
+            if(inView){
+                animation.start({
+                    opacity:1,
+                    y:0,
+                    transition:{
+                        ease: [0.6, 0.01, -0.05, 0],
+                        duration: 0.6
+                    }
+                })
+            } else {
+                animation.start({
+                    opacity:0,
+                    y:100
+                })
+            }
+            console.log("use effect hook, inView = ", inView)
+        },[inView])
+
         return (
-            <div className="group px-6 py-6 bg-card-back rounded-md flex flex-col justify-between md:hover:-translate-y-4 hover:cursor-pointer hover:drop-shadow-xl duration-500">
+            <motion.div ref={ref} animate={animation} className="group px-6 py-6 bg-card-back rounded-md flex flex-col justify-between md:hover:-translate-y-4 hover:cursor-pointer hover:drop-shadow-xl duration-500">
                 <div className="space-y-6">
                     <div id="icons" className="flex justify-between ">
                         <div
@@ -84,7 +111,7 @@ const ProjectCard = ({ selected }) => {
                         })}
                     </div>
                 </div>
-            </div>
+            </motion.div>
         );
     } else {
         return null;

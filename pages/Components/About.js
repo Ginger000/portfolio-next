@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactMarkdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Icon } from '@iconify/react';
-
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 
 
@@ -16,8 +17,33 @@ const About = ({ profile }) => {
     const avatar_1_alt = avatar_1.data.attributes.alternativeText;
     const avatar_2_url = avatar_2.data.attributes.formats.small.url;
     const avatar_2_alt = avatar_2.data.attributes.alternativeText;
+
+    const {ref, inView} = useInView({
+        triggerOnce: true,
+        threshold:0.2
+    });
+    const animation = useAnimation();
+    useEffect(()=>{
+        if(inView){
+            animation.start({
+                opacity:1,
+                y:0,
+                transition:{
+                    ease: [0.6, 0.01, -0.05, 0],
+                    duration: 0.6
+                }
+            })
+        } else {
+            animation.start({
+                opacity:0,
+                y:100
+            })
+        }
+        // console.log("use effect hook, inView = ", inView)
+    },[inView])
+
     return (
-        <div className="grid grid-cols-12 mt-10 mb-40 text-gray-200">
+        <motion.div ref={ref} animate={animation} className="grid grid-cols-12 mt-10 mb-40 text-gray-200">
             <div className="col-span-12 md:col-span-7 pr-10">
                 <div>
                     <ReactMarkdown>{content_1}</ReactMarkdown>
@@ -86,7 +112,7 @@ const About = ({ profile }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 } else {
     return null

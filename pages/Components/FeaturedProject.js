@@ -1,20 +1,46 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { v4 as uuidv4 } from 'uuid';
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+
 
 const FeaturedProject = ({ project, id }) => {
     if(project){
 
-    
+    const {ref, inView} = useInView({
+        triggerOnce: true,
+        threshold:0.2
+    });
+    const animation = useAnimation();
+    useEffect(()=>{
+        if(inView){
+            animation.start({
+                opacity:1,
+                y:0,
+                transition:{
+                    ease: [0.6, 0.01, -0.05, 0],
+                    duration: 0.6
+                }
+            })
+        } else {
+            animation.start({
+                opacity:0,
+                y:100
+            })
+        }
+        // console.log("use effect hook, inView = ", inView)
+    },[inView])
+
     const { title, description, techStack, githubLink, deployLink } =
         project.attributes;
     const { url } = project.attributes.cover.data.attributes.formats.large;
     return (
-        <div className=" drop-shadow-lg md:drop-shadow-none sm:w-4/5 xl:max-w-screen-lg mx-auto mb-24 mt-12">
+        <div ref={ref} className=" drop-shadow-lg md:drop-shadow-none sm:w-4/5 xl:max-w-screen-lg mx-auto mb-24 mt-12">
             {console.log(url)}
-            <div className="grid grid-cols-10 ">
+            <motion.div animate={animation} className="grid grid-cols-10 ">
                 <div className="md:hidden relative row-span-full col-start-1 col-span-10 shadow-xl">
                     <img
                         className="opacity-10 absolute inset-0 w-full h-full object-cover object-center rounded-sm"
@@ -93,7 +119,7 @@ const FeaturedProject = ({ project, id }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

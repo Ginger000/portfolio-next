@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import Button from "./Components/Button"
 import Hero from "./Components/Hero"
 import axios from "axios"
@@ -11,19 +11,46 @@ import HobbyCard from "./Components/HobbyCard"
 import Contact from "./Components/Contact"
 import Link from "next/link"
 import { v4 as uuidv4 } from 'uuid';
-
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export default function Home({hero, featureProjects, profile,hobbies, selected}) {
   console.log("*****************IN INDEX COMPONENT******************")
+
   const [isSix, setIsSix] = useState(true)
   const toggler = () => setIsSix(!isSix)
   const slice = selected.sort((a,b)=>a.id -b.id).slice(0, 6)
+
+  const {ref, inView} = useInView({
+    triggerOnce: true,
+    threshold:0.2
+});
+const animation = useAnimation();
+useEffect(()=>{
+    if(inView){
+        animation.start({
+            opacity:1,
+            y:0,
+            transition:{
+                ease: [0.6, 0.01, -0.05, 0],
+                duration: 0.6
+            }
+        })
+    } else {
+        animation.start({
+            opacity:0,
+            y:100
+        })
+    }
+    // console.log("use effect hook, inView = ", inView)
+},[inView])
+
   return (
     <div className=' text-white w-full '>
       {/* <h1>Ginger</h1> */}
       <Hero hero={hero}/>
     
-      <section className="w-4/5 xl:max-w-screen-lg mx-auto"  id="work">
+      <section className="w-4/5 xl:max-w-screen-lg mx-auto pt-20" id="work">
       <SectionIntro content="What I've built" />
         {   
           featureProjects && featureProjects.sort((a,b)=>a.id-b.id).map((project,idx)=>{
@@ -38,7 +65,7 @@ export default function Home({hero, featureProjects, profile,hobbies, selected})
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
           { isSix ?
             slice.map(s=>{
-              return <ProjectCard key={uuidv4()} selected={s} />
+              return <ProjectCard  key={uuidv4()} selected={s} />
             }) :
             selected.map(s=>{
               return <ProjectCard key={uuidv4()} selected={s} />
@@ -54,7 +81,7 @@ export default function Home({hero, featureProjects, profile,hobbies, selected})
         </div> 
       </section>
 
-      <section className="w-4/5 xl:max-w-screen-lg mx-auto" id="about">
+      <section className="w-4/5 xl:max-w-screen-lg mx-auto pt-10" id="about">
         <SectionIntro content="Who I am" />
         <About profile={profile}/>
       </section>
