@@ -11,12 +11,6 @@ import { useInView } from 'react-intersection-observer';
 
 
 const About = ({ profile }) => {
-    if(profile){
-    const { content_1, content_2, avatar_1, avatar_2 } = profile[0].attributes;
-    const avatar_1_url = avatar_1.data.attributes.formats.medium.url;
-    const avatar_1_alt = avatar_1.data.attributes.alternativeText;
-    const avatar_2_url = avatar_2.data.attributes.formats.small.url;
-    const avatar_2_alt = avatar_2.data.attributes.alternativeText;
 
     const {ref, inView} = useInView({
         triggerOnce: true,
@@ -42,6 +36,14 @@ const About = ({ profile }) => {
         // console.log("use effect hook, inView = ", inView)
     },[inView])
 
+    if(profile){
+    const { content_1, content_2, avatar_1, avatar_2 } = profile[0].attributes;
+    const avatar_1_url = avatar_1.data.attributes.formats.medium.url;
+    const avatar_1_alt = avatar_1.data.attributes.alternativeText;
+    const avatar_2_url = avatar_2.data.attributes.formats.small.url;
+    const avatar_2_alt = avatar_2.data.attributes.alternativeText;
+
+    
     return (
         <motion.div ref={ref} animate={animation} className="grid grid-cols-12 mt-10 mb-40 text-gray-200">
             <div className="col-span-12 md:col-span-7 pr-10">
