@@ -43,11 +43,14 @@ const FeaturedProject = ({ project, id }) => {
             {console.log(url)}
             <motion.div animate={animation} className="grid grid-cols-10 ">
                 <div className="md:hidden relative row-span-full col-start-1 col-span-10 shadow-xl">
-                    <img
-                        className="opacity-10 absolute inset-0 w-full h-full object-cover object-center rounded-sm"
-                        src={url}
-                        alt=""
-                    />
+                    <a href={deployLink} target="_blank" rel="noreferrer noopener">
+                        <img
+                            className="opacity-10 absolute inset-0 w-full h-full object-cover object-center rounded-sm"
+                            src={url}
+                            alt=""
+                        />
+                    </a>
+                    
                 </div>
 
                 <div
@@ -55,11 +58,14 @@ const FeaturedProject = ({ project, id }) => {
                         id % 2 === 0 ? 'col-start-1' : 'col-end-11'
                     }  col-span-6 self-center opacity-40 hover:opacity-100 hover:cursor-pointer duration-500 shadow-lg`}
                 >
+                    <a href={deployLink} target="_blank" rel="noreferrer noopener">
                     <img
                         className="object-cover rounded-lg"
                         src={url}
                         alt=""
                     />
+                    </a>
+                    
                 </div>
 
                 <div
@@ -73,6 +79,7 @@ const FeaturedProject = ({ project, id }) => {
                         } md:items-start space-y-2`}
                     >
                         <h6 className="text-hyper-cyan">Featured Project</h6>
+                        <a href={deployLink} target="_blank" rel="noreferrer noopener">
                         <h2
                             className={`hover:text-hyper-cyan ${
                                 id % 2 === 0 ? 'text-right' : 'text-left'
@@ -80,6 +87,8 @@ const FeaturedProject = ({ project, id }) => {
                         >
                             {title}
                         </h2>
+                        </a>
+                        
                         <div className="md:px-6 py-6 md:bg-card-back/75 rounded-md shadow-md hover:drop-shadow-lg">
                             <p
                                 className={`text-gray-100 ${

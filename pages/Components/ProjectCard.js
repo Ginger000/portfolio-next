@@ -91,11 +91,14 @@ const ProjectCard = ({ selected}) => {
                             )}
                         </div>
                     </div>
+                    <a href={deployLink} target="_blank" rel="noreferrer noopener">
                     <h2 className="text-xl text-pale-blue font-bold group-hover:text-hyper-cyan ">
                         <ReactMarkdown>
                         {titleRichText}                        
                         </ReactMarkdown>
                     </h2>
+                    </a>
+                    
                     <p>
                         <ReactMarkdown>{description}</ReactMarkdown>
                     </p>
