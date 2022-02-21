@@ -59,7 +59,7 @@ const ProjectCard = ({ selected}) => {
                         </div>
                         <div id="gitAndDeploy" className="space-x-4 space-y-2">
                             {githubLink ? (
-                                <a href={githubLink}>
+                                <a href={githubLink} target="_blank" rel="noreferrer noopener">
                                     <FontAwesomeIcon
                                         className="text-xl hover:text-hyper-cyan hover:cursor-pointer duration-500"
                                         icon={faGithub}
@@ -71,14 +71,14 @@ const ProjectCard = ({ selected}) => {
 
                             {deployLink ? <> {
                                 title === 'Front-end Hobby Group Practice' ? (
-                                    <Link href="/FrontendMentor" passHref>
+                                    <Link href="/FrontendMentor" target="_blank" rel="noreferrer noopener" passHref>
                                         <FontAwesomeIcon
                                             className="text-xl hover:text-hyper-cyan hover:cursor-pointer duration-500"
                                             icon={faArrowUpRightFromSquare}
                                         ></FontAwesomeIcon>
                                     </Link>
                                 ) : (
-                                    <a href={deployLink}>
+                                    <a href={deployLink} target="_blank" rel="noreferrer noopener">
                                         <FontAwesomeIcon
                                             className="text-xl hover:text-hyper-cyan hover:cursor-pointer duration-500"
                                             icon={faArrowUpRightFromSquare}

@@ -18,16 +18,16 @@ const MentorCard = ({singleProject}) => {
             <div className='space-y-4'>
                 <h3 className='text-2xl text-pale-blue font-bold hover:text-hyper-cyan duration-500 hover:cursor-pointer text-center md:text-left'>{title}</h3>
                 <div className='flex items-center justify-center md:justify-start space-x-4'>
-                    <a className='inline-block' href={mentorLink}>
+                    <a className='inline-block' href={mentorLink} target="_blank" rel="noreferrer noopener">
                         <img src="/front-mentor-favicon.png" alt={alternativeText} />
                     </a>
-                    <a  href={githubLink}>
+                    <a  href={githubLink} target="_blank" rel="noreferrer noopener">
                         <FontAwesomeIcon
                             className="hover:text-hyper-cyan hover:cursor-pointer text-3xl duration-500 text-gray-50"
                             icon={faGithub}
                         ></FontAwesomeIcon>
                     </a>
-                    <a href={deployLink}>
+                    <a href={deployLink} target="_blank" rel="noreferrer noopener">
                         <FontAwesomeIcon
                             className="hover:text-hyper-cyan hover:cursor-pointer text-3xl duration-500 text-gray-50"
                             icon={faArrowUpRightFromSquare}

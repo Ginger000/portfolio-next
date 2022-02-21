@@ -98,7 +98,7 @@ const FeaturedProject = ({ project, id }) => {
                         </ul>
                         <div className="space-x-6">
                             {githubLink ? (
-                                <a href={githubLink} >
+                                <a href={githubLink} target="_blank" rel="noreferrer noopener">
                                     <FontAwesomeIcon
                                         className="hover:text-hyper-cyan hover:cursor-pointer text-xl duration-500"
                                         icon={faGithub}
@@ -108,7 +108,7 @@ const FeaturedProject = ({ project, id }) => {
                                 ''
                             )}
                             {deployLink ? (
-                                <a href={deployLink} >
+                                <a href={deployLink} target="_blank" rel="noreferrer noopener">
                                     <FontAwesomeIcon
                                         className="hover:text-hyper-cyan hover:cursor-pointer text-xl duration-500"
                                         icon={faArrowUpRightFromSquare}

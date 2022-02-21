@@ -46,7 +46,7 @@ const About = ({ profile }) => {
     
     return (
         <motion.div ref={ref} animate={animation} className="grid grid-cols-12 mt-10 mb-40 text-gray-200">
-            <div className="col-span-12 md:col-span-7 pr-10">
+            <div className="col-span-12 md:col-span-7 md:pr-10">
                 <div>
                     <ReactMarkdown>{content_1}</ReactMarkdown>
                 </div>
@@ -77,19 +77,19 @@ const About = ({ profile }) => {
                         <div className="-z-10 absolute h-full w-full top-5 left-5 border-0.5 border-hyper-cyan"></div>
                     </div>
                     <div className=' ml-6 mt-10 bottom-5 flex flex-col space-y-3 text-2xl justify-end'>
-                        <a href="https://www.facebook.com/profile.php?id=100009390374545">
+                        <a href="https://www.facebook.com/profile.php?id=100009390374545" target="_blank" rel="noreferrer noopener">
                         <FontAwesomeIcon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon={faFacebookSquare}></FontAwesomeIcon>
                         </a>
-                        <a href="https://www.instagram.com/ginger_linjiang/?hl=en">
+                        <a href="https://www.instagram.com/ginger_linjiang/?hl=en" target="_blank" rel="noreferrer noopener">
                         <FontAwesomeIcon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon={faInstagram} ></FontAwesomeIcon>
                         </a>
-                        <a href="https://github.com/Ginger000">
+                        <a href="https://github.com/Ginger000" target="_blank" rel="noreferrer noopener">
                         <FontAwesomeIcon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon={faGithub}  ></FontAwesomeIcon>
                         </a>
-                        <a href="https://leetcode.com/ginger23333/">
+                        <a href="https://leetcode.com/ginger23333/" target="_blank" rel="noreferrer noopener">
                         <Icon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon="simple-icons:leetcode" />
                         </a>
-                        <a href="https://issuu.com/ginger_linjiang/docs/lin_jiang_s_portfolio">
+                        <a href="https://issuu.com/ginger_linjiang/docs/lin_jiang_s_portfolio" target="_blank" rel="noreferrer noopener">
                         <Icon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon="cib:issuu" />
                         </a>
                     </div>
@@ -116,19 +116,19 @@ const About = ({ profile }) => {
                         />
                     </div>
                     <div className='mt-6 flex space-x-3 text-2xl justify-center items-center'>
-                    <a href="https://www.facebook.com/profile.php?id=100009390374545">
+                    <a href="https://www.facebook.com/profile.php?id=100009390374545" target="_blank" rel="noreferrer noopener">
                         <FontAwesomeIcon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon={faFacebookSquare}></FontAwesomeIcon>
                         </a>
-                        <a href="https://www.instagram.com/ginger_linjiang/?hl=en">
+                        <a href="https://www.instagram.com/ginger_linjiang/?hl=en" target="_blank" rel="noreferrer noopener">
                         <FontAwesomeIcon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon={faInstagram} ></FontAwesomeIcon>
                         </a>
-                        <a href="https://github.com/Ginger000">
+                        <a href="https://github.com/Ginger000" target="_blank" rel="noreferrer noopener">
                         <FontAwesomeIcon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon={faGithub}  ></FontAwesomeIcon>
                         </a>
-                        <a href="https://leetcode.com/ginger23333/">
+                        <a href="https://leetcode.com/ginger23333/" target="_blank" rel="noreferrer noopener">
                         <Icon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon="simple-icons:leetcode" />
                         </a>
-                        <a href="https://issuu.com/ginger_linjiang/docs/lin_jiang_s_portfolio">
+                        <a href="https://issuu.com/ginger_linjiang/docs/lin_jiang_s_portfolio" target="_blank" rel="noreferrer noopener">
                         <Icon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon="cib:issuu" />
                         </a>
                     </div>

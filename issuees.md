@@ -47,4 +47,6 @@ https://www.reddit.com/r/javascript/comments/976dxy/i_have_both_yarn_and_npm_ins
 
 https://www.youtube.com/watch?v=hkhskSrT5SY
 
+https://stackoverflow.com/questions/69023647/open-link-in-a-new-tab-using-link-next-js-component
+
 
