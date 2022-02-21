@@ -27,7 +27,7 @@ export default function Home({
 
     const [isSix, setIsSix] = useState(true);
     const toggler = () => setIsSix(!isSix);
-    const slice = selected.sort((a, b) => a.id - b.id).slice(0, 6);
+    const slice = selected.sort((a, b) => a.attributes.id - b.attributes.id).slice(0, 6);
 
     const [loading, setLoading] = useState(true);
     configureAnchors({scrollDuration: 1000})
@@ -78,7 +78,7 @@ export default function Home({
                                           />
                                       );
                                   })
-                                : selected.map((s) => {
+                                : selected.sort((a,b)=>a.attributes.order-b.attributes.order).map((s) => {
                                       return (
                                           <ProjectCard
                                               key={uuidv4()}

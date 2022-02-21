@@ -32,38 +32,37 @@ const Contact = () => {
         }
         // console.log("use effect hook, inView = ", inView)
     },[inView])
+    const sendEmail = () => {
+        window.location = 'mailto:linj2@illinois.edu';
+    };
     return (
         <motion.div ref={ref} animate={animation} className="text-center mt-72 space-y-6">
             <h1 className="mb-16 text-4xl font-bold text-ho-pink">
                 Hire me or just say Hello
             </h1>
             <div>
-                <Button> {`   Email   `}</Button>
+                
+                <Button handleOnClick={sendEmail}> Email: linj2@illinois.edu </Button>
             </div>
             <div>
-                <Button> Phone </Button>
+                Phone: 217-904-0965
             </div>
             <div className="mt-6 flex space-x-3 text-2xl justify-center items-center text-gray-300">
-                <FontAwesomeIcon
-                    className="hover:text-hyper-cyan duration-500 cursor-pointer"
-                    icon={faFacebookSquare}
-                ></FontAwesomeIcon>
-                <FontAwesomeIcon
-                    className="hover:text-hyper-cyan duration-500 cursor-pointer"
-                    icon={faInstagram}
-                ></FontAwesomeIcon>
-                <FontAwesomeIcon
-                    className="hover:text-hyper-cyan duration-500 cursor-pointer"
-                    icon={faGithub}
-                ></FontAwesomeIcon>
-                <Icon
-                    className="hover:text-hyper-cyan duration-500 cursor-pointer"
-                    icon="simple-icons:leetcode"
-                />
-                <Icon
-                    className="hover:text-hyper-cyan duration-500 cursor-pointer text-xl"
-                    icon="cib:issuu"
-                />
+            <a href="https://www.facebook.com/profile.php?id=100009390374545">
+                        <FontAwesomeIcon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon={faFacebookSquare}></FontAwesomeIcon>
+                        </a>
+                        <a href="https://www.instagram.com/ginger_linjiang/?hl=en">
+                        <FontAwesomeIcon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon={faInstagram} ></FontAwesomeIcon>
+                        </a>
+                        <a href="https://github.com/Ginger000">
+                        <FontAwesomeIcon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon={faGithub}  ></FontAwesomeIcon>
+                        </a>
+                        <a href="https://leetcode.com/ginger23333/">
+                        <Icon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon="simple-icons:leetcode" />
+                        </a>
+                        <a href="https://issuu.com/ginger_linjiang/docs/lin_jiang_s_portfolio">
+                        <Icon className='hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer' icon="cib:issuu" />
+                        </a>
             </div>
         </motion.div>
     );

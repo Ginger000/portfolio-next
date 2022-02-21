@@ -50,18 +50,18 @@ const archive = ({ features, selected }) => {
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-600">
-                            {features.map((f) => (
+                            {features.sort((a,b)=>b.attributes.year-a.attributes.year).map((f) => (
                                 <tr
                                     className="hover:bg-slate-800"
                                     key={f.attributes.title}
                                 >
                                     <td className="text-hyper-cyan text-xl py-4">
-                                        2022
+                                        {f.attributes.year}
                                     </td>
                                     <td className="font-bold text-xl">
                                         {f.attributes.title}
                                     </td>
-                                    <td className="">1961</td>
+                                    <td className="">{f.attributes.madeAt}</td>
                                     <td>React</td>
                                     <td className="space-x-2">
                                         <FontAwesomeIcon
@@ -75,7 +75,7 @@ const archive = ({ features, selected }) => {
                                     </td>
                                 </tr>
                             ))}
-                            {selected.map((f) => (
+                            {selected.sort((a,b)=>b.attributes.year-a.attributes.year).map((f) => (
                                 <tr
                                     className="hover:bg-slate-800"
                                     key={f.attributes.title}

@@ -34,7 +34,8 @@ useEffect(()=>{
   if(hobby){
   const {name_1, name_2, name_3, quote} = hobby.attributes
   return (
-    <motion.div ref={ref} animate={animation} className='group px-6 py-6  rounded-md h-72 flex flex-col justify-between md:hover:-translate-y-4 hover:drop-shadow-xl duration-500
+      <motion.div ref={ref} animate={animation}>
+    <div  className='group px-6 py-6  rounded-md h-72 flex flex-col justify-between md:hover:-translate-y-4 hover:drop-shadow-xl duration-500
         border-2 border-hyper-cyan'>
         <div className='text-3xl text-pale-blue font-bold group-hover:text-hyper-cyan'>
             <h3>{name_1}</h3>
@@ -44,6 +45,7 @@ useEffect(()=>{
         <p className='font-light'>
             {quote}
         </p>
+    </div>
     </motion.div>
   )
 } else {
