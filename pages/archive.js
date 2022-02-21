@@ -9,36 +9,32 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const archive = ({ features, selected }) => {
-    const [loading, setLoading] = useState(true);
-    const {ref, inView} = useInView({
-        triggerOnce: true,
-        threshold:0.2
-    });
-    const animation = useAnimation();
-    useEffect(()=>{
-        if(inView){
-            animation.start({
-                opacity:1,
-                y:0,
-                transition:{
-                    ease: [0.6, 0.01, -0.05, 0],
-                    duration: 0.6
-                }
-            })
-        } else {
-            animation.start({
-                opacity:0,
-                y:100
-            })
-        }
-        // console.log("use effect hook, inView = ", inView)
-    },[inView])
+    // const {ref, inView} = useInView({
+    //     triggerOnce: true,
+    //     threshold:0.2
+    // });
+    // const animation = useAnimation();
+    // useEffect(()=>{
+    //     if(inView){
+    //         animation.start({
+    //             opacity:1,
+    //             y:0,
+    //             transition:{
+    //                 ease: [0.6, 0.01, -0.05, 0],
+    //                 duration: 0.6
+    //             }
+    //         })
+    //     } else {
+    //         animation.start({
+    //             opacity:0,
+    //             y:100
+    //         })
+    //     }
+    //     // console.log("use effect hook, inView = ", inView)
+    // },[inView])
     return (
-        <>
-            {loading ? (
-                <Loader setLoading={setLoading} />
-            ) : (
-                <motion.div ref={ref} animate={animation} className="mt-20 w-4/5 xl:max-w-screen-lg mx-auto">
+
+                <div className="mt-20 w-4/5 xl:max-w-screen-lg mx-auto">
                     <h1 className="text-gray-100 text-4xl font-bold mb-10">
                         Here is the project archive
                     </h1>
@@ -156,10 +152,9 @@ const archive = ({ features, selected }) => {
                             ))}
                         </tbody>
                     </table>
-                </motion.div>
-            )}
-        </>
-    );
+                </div>
+            )
+
 };
 
 archive.getInitialProps = async () => {
