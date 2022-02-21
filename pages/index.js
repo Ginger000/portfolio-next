@@ -35,7 +35,7 @@ export default function Home({
     return (
         <> 
 <Head>
-      <title>Ginger's Portfolio</title>
+      <title>Ginger Portfolio</title>
       <link rel="shortcut icon" href="/paper_cyan_favicon.ico" />
       </Head>
             {loading ? (
