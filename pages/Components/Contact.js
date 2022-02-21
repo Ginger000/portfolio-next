@@ -52,31 +52,31 @@ const Contact = () => {
             </div>
             <div>Phone: 217-904-0965</div>
             <div className="mt-6 flex space-x-3 text-2xl justify-center items-center text-gray-300">
-                <a href="https://www.facebook.com/profile.php?id=100009390374545" target="_blank">
+                <a href="https://www.facebook.com/profile.php?id=100009390374545" target="_blank" rel="noreferrer noopener">
                     <FontAwesomeIcon
                         className="hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer"
                         icon={faFacebookSquare}
                     ></FontAwesomeIcon>
                 </a>
-                <a href="https://www.instagram.com/ginger_linjiang/?hl=en" target="_blank">
+                <a href="https://www.instagram.com/ginger_linjiang/?hl=en" target="_blank" rel="noreferrer noopener">
                     <FontAwesomeIcon
                         className="hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer"
                         icon={faInstagram}
                     ></FontAwesomeIcon>
                 </a>
-                <a href="https://github.com/Ginger000" target="_blank">
+                <a href="https://github.com/Ginger000" target="_blank" rel="noreferrer noopener">
                     <FontAwesomeIcon
                         className="hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer"
                         icon={faGithub}
                     ></FontAwesomeIcon>
                 </a>
-                <a href="https://leetcode.com/ginger23333/" target="_blank">
+                <a href="https://leetcode.com/ginger23333/" target="_blank" rel="noreferrer noopener">
                     <Icon
                         className="hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer"
                         icon="simple-icons:leetcode"
                     />
                 </a>
-                <a href="https://issuu.com/ginger_linjiang/docs/lin_jiang_s_portfolio" target="_blank">
+                <a href="https://issuu.com/ginger_linjiang/docs/lin_jiang_s_portfolio" target="_blank" rel="noreferrer noopener">
                     <Icon
                         className="hover:text-hyper-cyan text-gray-200 duration-500 cursor-pointer"
                         icon="cib:issuu"
