@@ -52,3 +52,5 @@ https://stackoverflow.com/questions/69023647/open-link-in-a-new-tab-using-link-n
 https://gauger.io/fonticon/
 
 
+https://github.com/vercel/next.js/issues/20682
+
