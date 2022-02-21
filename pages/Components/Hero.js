@@ -38,6 +38,7 @@ const Hero = ({ hero }) => {
           initial='hidden'
           animate='show'
           exit='exit'
+          id = 'hero'
         >     
             
           <motion.div variants = {item} >

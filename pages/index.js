@@ -13,6 +13,9 @@ import Link from 'next/link';
 import { v4 as uuidv4 } from 'uuid';
 import Loader from './Components/Loader';
 import LoaderTest from './Components/LoaderTest';
+import ScrollableAnchor from 'react-scrollable-anchor'
+import { configureAnchors } from 'react-scrollable-anchor'
+
 export default function Home({
     hero,
     featureProjects,
@@ -27,20 +30,21 @@ export default function Home({
     const slice = selected.sort((a, b) => a.id - b.id).slice(0, 6);
 
     const [loading, setLoading] = useState(true);
-
+    configureAnchors({scrollDuration: 1000})
     return (
         <>
             {loading ? (
                 <Loader setLoading={setLoading} />
             ) : (
-                <div className=" text-white w-full ">
+                <div className=" text-white w-full">
                     {/* <h1>Ginger</h1> */}
-                    <Hero hero={hero} />
+                    <Hero hero={hero}/>
                     {/* <Loader /> */}
                     {/* <LoaderTest /> */}
-                    <section
+                    <ScrollableAnchor id="work">
+                    <section 
                         className="w-4/5 xl:max-w-screen-lg mx-auto pt-20"
-                        id="work"
+                        
                     >
                         <SectionIntro content="What I've built" />
                         {featureProjects &&
@@ -89,15 +93,17 @@ export default function Home({
                             </Button>
                         </div>
                     </section>
+                    </ScrollableAnchor>
 
+                    <ScrollableAnchor id="about">
                     <section
                         className="w-4/5 xl:max-w-screen-lg mx-auto pt-10"
-                        id="about"
+                        
                     >
                         <SectionIntro content="Who I am" />
                         <About profile={profile} />
                     </section>
-
+                    </ScrollableAnchor>
                     <section
                         className="w-4/5 xl:max-w-screen-lg mx-auto"
                         id="hobby"
@@ -110,9 +116,11 @@ export default function Home({
                         </div>
                     </section>
 
-                    <section id="contact">
+<ScrollableAnchor id="contact">
+                    <section >
                         <Contact />
                     </section>
+                    </ScrollableAnchor>
                 </div>
             )}
         </>

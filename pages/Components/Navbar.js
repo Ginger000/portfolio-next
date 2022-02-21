@@ -4,17 +4,25 @@ import { faPaperPlane, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+// import {Link as ScrollLink} from 'react-scroll/modules/components/Link';
+// import {Link as Link2} from 'react-scroll/modules/components/Link';
+// import Pdf from './Assets/Resume_Ginger_Lin_Jiang.pdf'
+// import Pdf from '/pdf.pdf'
 
 
 const Navbar = () => {
     let links = [
-        { name: 'Work', link: '#work' },
-        { name: 'About', link: '#about' },
-        { name: 'Contact', link: '#contact' },
-        { name: 'Resume', link: '/' },
+        { name: 'Work', link: '#work', anchor:'work' },
+        { name: 'About', link: '#about', anchor:'about' },
+        { name: 'Contact', link: '#contact', anchor:'contact' },
+        { name: 'Resume', link: '/Resume_Ginger_Lin_Jiang.pdf', anchor:'work' },
     ];
 
     let [open, setOpen] = useState(false);
+
+    const openResumeTab = (th)=>{
+        window.open(th.name, '_blank')
+    }
 
     return (
         <motion.div 
@@ -63,7 +71,7 @@ const Navbar = () => {
                             key={link.name}
                             className="md:ml-8 text-lg md:my-0 my-7 font-light"
                         >
-                            <a
+                            <a  
                                 href={link.link}
                                 className="text-ho-pink hover:text-hyper-cyan duration-500"
                             >
@@ -71,6 +79,14 @@ const Navbar = () => {
                             </a>
                         </li>
                     ))}
+                    {/* <li className="md:ml-8 text-lg md:my-0 my-7 font-light">
+                        <a                                 
+                            className="text-ho-pink hover:text-hyper-cyan duration-500"
+                            href="/pdf.pdf" name="/pdf.pdf"
+                        >
+                            Resume
+                        </a>
+                    </li> */}
                 </ul>
             </div>
         </motion.div>
