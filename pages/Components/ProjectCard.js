@@ -6,7 +6,7 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import ReactMarkdown from 'react-markdown';
 import { v4 as uuidv4 } from 'uuid';
 import Link from 'next/link';
-import { motion, useAnimation } from 'framer-motion';
+import { motion, useAnimation , AnimateSharedLayout, AnimatePresence} from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const ProjectCard = ({ selected}) => {
@@ -44,8 +44,11 @@ const ProjectCard = ({ selected}) => {
             course,
         } = selected.attributes;
 
+        //There is a conflict between motion and tailwind translate
         return (
-            <motion.div ref={ref} animate={animation} className="group px-6 py-6 bg-card-back rounded-md flex flex-col justify-between md:hover:-translate-y-4 hover:cursor-pointer hover:drop-shadow-xl duration-500">
+            <motion.div ref={ref} animate={animation} className="group ">
+            <div className="h-full px-6 py-6 bg-card-back rounded-md flex flex-col justify-between hover:-translate-y-4 hover:cursor-pointer hover:drop-shadow-xl duration-500">
+              
                 <div className="space-y-6">
                     <div id="icons" className="flex justify-between ">
                         <div
@@ -87,7 +90,7 @@ const ProjectCard = ({ selected}) => {
                             )}
                         </div>
                     </div>
-                    <h2 className="text-xl text-pale-blue font-bold group-hover:text-hyper-cyan">
+                    <h2 className="text-xl text-pale-blue font-bold group-hover:text-hyper-cyan ">
                         {title}
                     </h2>
                     <p>
@@ -111,6 +114,8 @@ const ProjectCard = ({ selected}) => {
                         })}
                     </div>
                 </div>
+    
+            </div>
             </motion.div>
         );
     } else {
