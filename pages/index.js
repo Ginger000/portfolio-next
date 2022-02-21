@@ -34,7 +34,10 @@ export default function Home({
     configureAnchors({scrollDuration: 1000})
     return (
         <> 
-
+<Head>
+      <title>Ginger's Portfolio</title>
+      <link rel="shortcut icon" href="/paper_cyan_favicon.ico" />
+      </Head>
             {loading ? (
                 <Loader setLoading={setLoading} />
             ) : (
