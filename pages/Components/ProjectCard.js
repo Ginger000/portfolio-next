@@ -42,6 +42,7 @@ const ProjectCard = ({ selected}) => {
             githubLink,
             deployLink,
             course,
+            titleRichText
         } = selected.attributes;
 
         //There is a conflict between motion and tailwind translate
@@ -91,7 +92,9 @@ const ProjectCard = ({ selected}) => {
                         </div>
                     </div>
                     <h2 className="text-xl text-pale-blue font-bold group-hover:text-hyper-cyan ">
-                        {title}
+                        <ReactMarkdown>
+                        {titleRichText}                        
+                        </ReactMarkdown>
                     </h2>
                     <p>
                         <ReactMarkdown>{description}</ReactMarkdown>

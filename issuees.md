@@ -49,4 +49,6 @@ https://www.youtube.com/watch?v=hkhskSrT5SY
 
 https://stackoverflow.com/questions/69023647/open-link-in-a-new-tab-using-link-next-js-component
 
+https://gauger.io/fonticon/
+
 

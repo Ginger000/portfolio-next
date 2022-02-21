@@ -15,6 +15,7 @@ import Loader from './Components/Loader';
 import LoaderTest from './Components/LoaderTest';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { configureAnchors } from 'react-scrollable-anchor'
+import Head from 'next/head';
 
 export default function Home({
     hero,
@@ -32,7 +33,8 @@ export default function Home({
     const [loading, setLoading] = useState(true);
     configureAnchors({scrollDuration: 1000})
     return (
-        <>
+        <> 
+
             {loading ? (
                 <Loader setLoading={setLoading} />
             ) : (
