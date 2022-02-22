@@ -15,11 +15,6 @@ const Navbar = () => {
         { name: 'Work', link: '#work', anchor: 'work' },
         { name: 'About', link: '#about', anchor: 'about' },
         { name: 'Contact', link: '#contact', anchor: 'contact' },
-        {
-            name: 'Resume',
-            link: '/Resume_Ginger_Lin_Jiang.pdf',
-            anchor: 'work',
-        },
     ];
 
     let [open, setOpen] = useState(false);
@@ -58,7 +53,6 @@ const Navbar = () => {
                             ></FontAwesomeIcon>
                         </span>
                     </Link>
-                    
                 </div>
 
                 <div
@@ -88,7 +82,16 @@ const Navbar = () => {
                             </a>
                         </li>
                     ))}
-                    
+                    <li className="md:ml-8 text-lg md:my-0 my-7 font-light">
+                        <a
+                            href="/Resume_Ginger_Lin_Jiang.pdf"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            className="text-ho-pink hover:text-hyper-cyan duration-500"
+                        >
+                            Resume
+                        </a>
+                    </li>
                 </ul>
             </div>
         </motion.div>
