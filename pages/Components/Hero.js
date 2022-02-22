@@ -81,10 +81,14 @@ const Hero = ({ hero }) => {
                     className="pt-6 flex sm:flex-row flex-col sm:space-x-6 space-y-4 sm:space-y-0"
                 >
                     <a href="#work">
+                        
                         <Button>Check Out My Work</Button>
+                        
+                        
                     </a>
-
+                    <div >
                     <Button handleOnClick={sendEmail}>Hire Me</Button>
+                    </div>
                 </motion.div>
             </motion.div>
         );
