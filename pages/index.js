@@ -64,17 +64,17 @@ export default function Home({
                                         />
                                     );
                                 })}
-                        <h2 className="text-center text-ho-pink text-3xl opacity-50 font-bold">
+                        <h2 className="text-center text-ho-pink text-3xl opacity-50 font-bold mb-10">
                             Other Relevant Projects
                         </h2>
-                        <Link href="/archive" passHref>
+                        {/* <Link href="/archive" passHref>
                             <a target="_blank" rel="noreferrer noopener">
                             <h6 className="text-center font-semibold hover:text-hyper-cyan duration-500 hover:cursor-pointer mt-6 md:mb-16">
                                 view the archive
                             </h6>
                             </a>
                             
-                        </Link>
+                        </Link> */}
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                             {isSix
