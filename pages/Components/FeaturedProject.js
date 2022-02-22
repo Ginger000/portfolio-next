@@ -82,7 +82,7 @@ const FeaturedProject = ({ project, id }) => {
                         <a href={deployLink} target="_blank" rel="noreferrer noopener">
                         <h2
                             className={`hover:text-hyper-cyan ${
-                                id % 2 === 0 ? 'text-right' : 'text-left'
+                                id % 2 === 0 ? 'md:text-right' : 'md:text-left'
                             } duration-500 hover:cursor-pointer text-2xl font-bold`}
                         >
                             {title}
