@@ -17,7 +17,7 @@ import Script from 'next/script';
 function MyApp({ Component, pageProps }) {
     return (
         <>
-            <Script
+            {/* <Script
                 strategy="lazyOnload"
                 src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
             />
@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
                   gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});`}
-            </Script>
+            </Script> */}
             <Navbar />
             <Component {...pageProps} />
             <Footer />

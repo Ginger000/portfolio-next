@@ -72,12 +72,12 @@ const ProjectCard = ({ selected}) => {
 
                             {deployLink ? <> {
                                 title === 'Front-end Hobby Group Practice' ? (
-                                    <Link href="/FrontendMentor" target="_blank" rel="noreferrer noopener" passHref>
+                                    <a href="/FrontendMentor" target="_blank" rel="noreferrer noopener">
                                         <FontAwesomeIcon
                                             className="text-xl hover:text-hyper-cyan hover:cursor-pointer duration-500"
                                             icon={faArrowUpRightFromSquare}
                                         ></FontAwesomeIcon>
-                                    </Link>
+                                    </a>
                                 ) : (
                                     <a href={deployLink} target="_blank" rel="noreferrer noopener">
                                         <FontAwesomeIcon
@@ -99,9 +99,9 @@ const ProjectCard = ({ selected}) => {
                     </h2>
                     </a>
                     
-                    <p>
+                    {/* <p> */}
                         <ReactMarkdown>{description}</ReactMarkdown>
-                    </p>
+                    {/* </p> */}
                 </div>
                 <div>
                     <div className="text-sm mt-2">

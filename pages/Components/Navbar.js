@@ -75,7 +75,7 @@ const Navbar = () => {
                             className="md:ml-8 text-lg md:my-0 my-7 font-light"
                         >
                             <a
-                                href={link.link}
+                                href= {`/${link.link}`}
                                 className="text-ho-pink hover:text-hyper-cyan duration-500"
                             >
                                 {link.name}
