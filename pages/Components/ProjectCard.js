@@ -91,7 +91,7 @@ const ProjectCard = ({ selected}) => {
                             )}
                         </div>
                     </div>
-                    <a href={deployLink} target="_blank" rel="noreferrer noopener">
+                    <a href={title === 'Front-end Hobby Group Practice' ? "/FrontendMentor" :deployLink} target="_blank" rel="noreferrer noopener">
                     <h2 className="text-xl text-pale-blue font-bold group-hover:text-hyper-cyan ">
                         <ReactMarkdown>
                         {titleRichText}                        
