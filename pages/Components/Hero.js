@@ -71,7 +71,7 @@ const Hero = ({ hero }) => {
                     variants={item}
                     className="text-hyper-cyan 2xl:text-lg"
                 >
-                    I’m graduating at May, 2022,
+                    I’m graduating at August, 2022,
                     <br className="" />
                     and currently finding a Front-end developer job or
                     internship.
