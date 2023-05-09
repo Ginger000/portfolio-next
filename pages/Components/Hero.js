@@ -1,7 +1,7 @@
-import React from 'react';
-import Button from './Button';
-import ReactMarkdown from 'react-markdown';
-import { motion } from 'framer-motion';
+import React from "react";
+import Button from "./Button";
+import ReactMarkdown from "react-markdown";
+import { motion } from "framer-motion";
 
 const container = {
     show: {
@@ -32,7 +32,7 @@ const Hero = ({ hero }) => {
             hero.attributes;
 
         const sendEmail = () => {
-            window.location = 'mailto:linj2@illinois.edu';
+            window.location = "mailto:linj2@illinois.edu";
         };
         return (
             <motion.div
@@ -71,23 +71,17 @@ const Hero = ({ hero }) => {
                     variants={item}
                     className="text-hyper-cyan 2xl:text-lg"
                 >
-                    I’m graduating at August, 2022,
-                    <br className="" />
-                    and currently finding a Front-end developer job or
-                    internship.
+                    Currently open to new opportunities.
                 </motion.p>
                 <motion.div
                     variants={item}
                     className="pt-6 flex sm:flex-row flex-col sm:space-x-6 space-y-4 sm:space-y-0"
                 >
                     <a href="#work">
-                        
                         <Button>Check Out My Work</Button>
-                        
-                        
                     </a>
-                    <div >
-                    <Button handleOnClick={sendEmail}>Hire Me</Button>
+                    <div>
+                        <Button handleOnClick={sendEmail}>Hire Me</Button>
                     </div>
                 </motion.div>
             </motion.div>
