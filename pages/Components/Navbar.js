@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPaperPlane, faXmark } from '@fortawesome/free-solid-svg-icons';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+import { motion } from "framer-motion";
 // import {Link as ScrollLink} from 'react-scroll/modules/components/Link';
 // import {Link as Link2} from 'react-scroll/modules/components/Link';
 // import Pdf from './Assets/Resume_Ginger_Lin_Jiang.pdf'
@@ -12,15 +12,15 @@ import { motion } from 'framer-motion';
 
 const Navbar = () => {
     let links = [
-        { name: 'Work', link: '#work', anchor: 'work' },
-        { name: 'About', link: '#about', anchor: 'about' },
-        { name: 'Contact', link: '#contact', anchor: 'contact' },
+        { name: "Work", link: "#work", anchor: "work" },
+        { name: "About", link: "#about", anchor: "about" },
+        { name: "Contact", link: "#contact", anchor: "contact" },
     ];
 
     let [open, setOpen] = useState(false);
 
     const openResumeTab = (th) => {
-        window.open(th.name, '_blank');
+        window.open(th.name, "_blank");
     };
 
     return (
@@ -29,7 +29,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -180 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-                ease: 'easeInOut',
+                ease: "easeInOut",
                 duration: 1,
                 delay: 0.6,
             }}
@@ -37,8 +37,8 @@ const Navbar = () => {
             <div
                 className={`md:flex items-center justify-between   ${
                     open
-                        ? 'bg-lighter-back transition-all duration-500 ease-in'
-                        : 'bg-back-blue transition-all duration-500 ease-in'
+                        ? "bg-lighter-back transition-all duration-500 ease-in"
+                        : "bg-back-blue transition-all duration-500 ease-in"
                 }  md:bg-back-blue py-4 md:px-10 px-7`}
             >
                 <div
@@ -66,7 +66,7 @@ const Navbar = () => {
 
                 <ul
                     className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-lighter-back md:bg-back-blue md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${
-                        open ? 'top-16 ' : 'top-[-490px]'
+                        open ? "top-16 " : "top-[-490px]"
                     }`}
                 >
                     {links.map((link) => (
@@ -75,7 +75,7 @@ const Navbar = () => {
                             className="md:ml-8 text-lg md:my-0 my-7 font-light"
                         >
                             <a
-                                href= {`/${link.link}`}
+                                href={`/${link.link}`}
                                 className="text-ho-pink hover:text-hyper-cyan duration-500"
                             >
                                 {link.name}
@@ -84,7 +84,7 @@ const Navbar = () => {
                     ))}
                     <li className="md:ml-8 text-lg md:my-0 my-7 font-light">
                         <a
-                            href="/Resume_Ginger_Lin_Jiang.pdf"
+                            href="/Resume_Ginger_Lin_Jiang_.pdf"
                             target="_blank"
                             rel="noreferrer noopener"
                             className="text-ho-pink hover:text-hyper-cyan duration-500"
